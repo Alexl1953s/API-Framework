@@ -1,0 +1,10 @@
+domains/TransactionCategory.class
+domains/TransactionState.class
+domains/TransactionResponse.class
+SmokeTestRunner.class
+domains/TransactionType.class
+domains/Transaction.class
+RegressionRunner.class
+step_defs/CheckingAccountsSteps.class
+step_defs/TransactionsSteps.class
+step_defs/BaseDigitalBankSteps.class

@@ -1,0 +1,446 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "comments": [
+          {
+            "line": 4,
+            "value": "###Background is used for"
+          },
+          {
+            "line": 5,
+            "value": "##Given - Preconditions for our tests."
+          },
+          {
+            "line": 6,
+            "value": "##When - Action"
+          },
+          {
+            "line": 7,
+            "value": "##Then - Validation"
+          },
+          {
+            "line": 10,
+            "value": "#Example table which with Scenario Outline:"
+          },
+          {
+            "line": 11,
+            "value": "#Data Table that goes under a specific step"
+          },
+          {
+            "line": 12,
+            "value": "#goal of cucumber is to write extemely generic steps which can be reused for multiple scenarios with no code change"
+          },
+          {
+            "line": 14,
+            "value": "#  Background: get valid authentication bearer token"
+          },
+          {
+            "line": 15,
+            "value": "#    Given the admin user is authenticated"
+          }
+        ],
+        "line": 17,
+        "name": "I should be able to create a new individual standard checking account with valid intro deposit",
+        "description": "",
+        "id": "crud-cheching-account-for-specific-user.;i-should-be-able-to-create-a-new-individual-standard-checking-account-with-valid-intro-deposit",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4247932600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I send a the following create account payload",
+            "match": {
+              "location": "CheckingAccountsSteps.i_send_a_the_following_create_account_payload(String,String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "accountName",
+                  "accountTypeCode",
+                  "openingDeposit",
+                  "ownerTypeCode"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "Lebron James Test",
+                  "SCK",
+                  "25",
+                  "IND"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7066400,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "response status code should be \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "CheckingAccountsSteps.response_status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 98732900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the following should be the response payload",
+            "match": {
+              "location": "CheckingAccountsSteps.the_following_should_be_the_response_payload(String,String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "name",
+                  "accountNumber",
+                  "currentBalance",
+                  "openingBalance"
+                ],
+                "line": 23
+              },
+              {
+                "cells": [
+                  "152",
+                  "Lebron James Test",
+                  "486130153",
+                  "25.0",
+                  "25.0"
+                ],
+                "line": 24
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 123788500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the following should be the accountType response payload",
+            "match": {
+              "location": "CheckingAccountsSteps.the_following_should_be_the_accountType_response_payload(String,String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "code",
+                  "category",
+                  "name",
+                  "minDeposit",
+                  "overdraftLimit",
+                  "overdraftFee"
+                ],
+                "line": 26
+              },
+              {
+                "cells": [
+                  "8",
+                  "SCK",
+                  "CHK",
+                  "Standard Checking",
+                  "25.0",
+                  "25.0",
+                  "10.0"
+                ],
+                "line": 27
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 41036200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the following should be the ownershipType response payload",
+            "match": {
+              "location": "CheckingAccountsSteps.the_following_should_be_the_ownershipType_response_payload(String,String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "code",
+                  "name"
+                ],
+                "line": 29
+              },
+              {
+                "cells": [
+                  "17",
+                  "IND",
+                  "Individual"
+                ],
+                "line": 30
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 36282500,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the following should be the accountStanding response payload",
+            "match": {
+              "location": "CheckingAccountsSteps.the_following_should_be_the_accountStanding_response_payload(String,String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "code",
+                  "name"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "19",
+                  "A1",
+                  "Open"
+                ],
+                "line": 33
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "CRUD Cheching account for specific user.",
+    "description": "",
+    "id": "crud-cheching-account-for-specific-user.",
+    "keyword": "Feature",
+    "uri": "features/CheckingAccounts.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@functional"
+      },
+      {
+        "line": 1,
+        "name": "@regression"
+      }
+    ]
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "I should be able to send a debit transaction with my checking account",
+        "description": "",
+        "id": "transactions;i-should-be-able-to-send-a-debit-transaction-with-my-checking-account",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 401257300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I send the following new transaction payload with the checking account id \u0027206\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "206",
+                  "offset": 75
+                }
+              ],
+              "location": "TransactionsSteps.i_send_the_following_new_transaction_payload_with_the_checking_account_id(int,Transaction\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "amount",
+                  "description",
+                  "transactionTypeCode"
+                ],
+                "line": 6
+              },
+              {
+                "cells": [
+                  "12",
+                  "Starbucks",
+                  "DBT"
+                ],
+                "line": 7
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3067100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "response status code should be \u0027200\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 32
+                }
+              ],
+              "location": "CheckingAccountsSteps.response_status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 50451100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the following should be the transaction response payload",
+            "match": {
+              "location": "TransactionsSteps.the_following_should_be_the_transaction_response_payload(Transaction\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "description",
+                  "amount"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "Starbucks",
+                  "-12.0"
+                ],
+                "line": 11
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 814600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the following should be the transaction type response payload",
+            "match": {
+              "location": "TransactionsSteps.the_following_should_be_the_transaction_type_response_payload(TransactionType\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "code",
+                  "name",
+                  "category"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "DBT",
+                  "Debit",
+                  "DEBIT"
+                ],
+                "line": 14
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 55100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the following should be the transaction state response payload",
+            "match": {
+              "location": "TransactionsSteps.the_following_should_be_the_transaction_state_response_payload(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "code",
+                  "name"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "COM",
+                  "Complete"
+                ],
+                "line": 17
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 49200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the following should be the transaction category response payload",
+            "match": {
+              "location": "TransactionsSteps.the_following_should_be_the_transaction_category_response_payload(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "name",
+                  "code"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "Misc",
+                  "MIS"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "Transactions",
+    "description": "",
+    "id": "transactions",
+    "keyword": "Feature",
+    "uri": "features/Transactions.feature"
+  }
+]
